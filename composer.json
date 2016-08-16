@@ -1,0 +1,22 @@
+{
+	"name" : "WireCardSeamlessBundle/WireCardSeamless",
+	"description" : "Wirecard Seamless payment gateway for SAPET",
+	"version" : "1.1.0",
+	"license" : "proprietaer",
+	"authors" : [{
+			"name" : "schwaar GmbH",
+			"email" : "office@schwaar.com"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3"
+	},
+	"require-dev" : {
+		"symfony/symfony" : "2.5.6"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"WireCardSeamlessBundle\\" : ""
+		}
+	}
+}
