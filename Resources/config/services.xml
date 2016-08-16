@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+    	<!-- Alternative -->
+  		<parameter key="wirecard.payment.service.epay.class">WireCardSeamlessBundle\PaymentGates\Alternative\EPAYProvider</parameter>
+<!--   		<parameter key="wirecard.payment.service.installment.class">WireCardSeamlessBundle\PaymentGates\Alternative\INSTALLMENTProvider</parameter> -->
+<!--   		<parameter key="wirecard.payment.service.invoiceb2b.class">WireCardSeamlessBundle\PaymentGates\Alternative\INVOICEB2BProvider</parameter> -->
+<!--   		<parameter key="wirecard.payment.service.invoice.class">WireCardSeamlessBundle\PaymentGates\Alternative\INVOICEProvider</parameter> -->
+  		<parameter key="wirecard.payment.service.moneta.class">WireCardSeamlessBundle\PaymentGates\Alternative\MONETAProvider</parameter>
+  		<parameter key="wirecard.payment.service.paypal.class">WireCardSeamlessBundle\PaymentGates\Alternative\PAYPALProvider</parameter>
+  		<parameter key="wirecard.payment.service.psc.class">WireCardSeamlessBundle\PaymentGates\Alternative\PSCProvider</parameter>
+  		<parameter key="wirecard.payment.service.quick.class">WireCardSeamlessBundle\PaymentGates\Alternative\QUICKProvider</parameter>
+  		<parameter key="wirecard.payment.service.skrillwallet.class">WireCardSeamlessBundle\PaymentGates\Alternative\SKRILLWALLETProvider</parameter>  		
+        
+		<!-- Banking -->
+        <parameter key="wirecard.payment.service.bancontactmistercash.class">WireCardSeamlessBundle\PaymentGates\Banking\BCTMISTERCASHProvider</parameter>
+        <parameter key="wirecard.payment.service.ekonto.class">WireCardSeamlessBundle\PaymentGates\Banking\EKONTOProvider</parameter>
+        <parameter key="wirecard.payment.service.eps.class">WireCardSeamlessBundle\PaymentGates\Banking\EPSProvider</parameter>
+        <parameter key="wirecard.payment.service.giropay.class">WireCardSeamlessBundle\PaymentGates\Banking\GIROPAYProvider</parameter>
+        <parameter key="wirecard.payment.service.idl.class">WireCardSeamlessBundle\PaymentGates\Banking\IDLProvider</parameter>
+        <parameter key="wirecard.payment.service.poli.class">WireCardSeamlessBundle\PaymentGates\Banking\POLIProvider</parameter>
+        <parameter key="wirecard.payment.service.przelewy24.class">WireCardSeamlessBundle\PaymentGates\Banking\PRZELEWY24Provider</parameter>
+        <parameter key="wirecard.payment.service.skrilldirect.class">WireCardSeamlessBundle\PaymentGates\Banking\SKRILLDIRECTProvider</parameter>
+        <parameter key="wirecard.payment.service.sofortueberweisung.class">WireCardSeamlessBundle\PaymentGates\Banking\SOFORTProvider</parameter>
+        <parameter key="wirecard.payment.service.tatrapay.class">WireCardSeamlessBundle\PaymentGates\Banking\TATRAPAYProvider</parameter>
+        <parameter key="wirecard.payment.service.trustly.class">WireCardSeamlessBundle\PaymentGates\Banking\TRUSTLYProvider</parameter>
+        
+		<!-- Cards -->
+        <parameter key="wirecard.payment.service.ccard.class">WireCardSeamlessBundle\PaymentGates\Cards\CCARDProvider</parameter>
+        <parameter key="wirecard.payment.service.ccardmoto.class">WireCardSeamlessBundle\PaymentGates\Cards\CCARDMOTOProvider</parameter>
+        
+		<!-- DirectDebit -->
+        <parameter key="wirecard.payment.service.sepadd.class">WireCardSeamlessBundle\PaymentGates\DirectDebit\SEPADDProvider</parameter>
+        
+		<!-- Mobile -->
+        <parameter key="wirecard.payment.service.mpass.class">WireCardSeamlessBundle\PaymentGates\Mobile\MPASSProvider</parameter>
+        <parameter key="wirecard.payment.service.pbx.class">WireCardSeamlessBundle\PaymentGates\Mobile\PBXProvider</parameter>
+        
+		<!-- Voucher -->
+        <parameter key="wirecard.payment.service.voucher.class">WireCardSeamlessBundle\PaymentGates\Voucher\VOUCHERProvider</parameter>
+        
+    </parameters>
+
+    <services>
+        
+    	<!-- Alternative -->
+        <service id="wirecard.payment.service.epay" class="%wirecard.payment.service.epay.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+<!--         <service id="wirecard.payment.service.installment" class="%wirecard.payment.service.installment.class%"> -->
+<!--             <tag name="sapet.extension.payment" /> -->
+<!--         </service> -->
+<!--         <service id="wirecard.payment.service.invoiceb2b" class="%wirecard.payment.service.invoiceb2b.class%"> -->
+<!--             <tag name="sapet.extension.payment" /> -->
+<!--         </service> -->
+<!--         <service id="wirecard.payment.service.invoice" class="%wirecard.payment.service.invoice.class%"> -->
+<!--             <tag name="sapet.extension.payment" /> -->
+<!--         </service> -->
+        <service id="wirecard.payment.service.moneta" class="%wirecard.payment.service.moneta.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.paypal" class="%wirecard.payment.service.paypal.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.psc" class="%wirecard.payment.service.psc.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.quick" class="%wirecard.payment.service.quick.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.skrillwallet" class="%wirecard.payment.service.skrillwallet.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        
+    	<!-- Cards -->
+        <service id="wirecard.payment.service.ccard" class="%wirecard.payment.service.ccard.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.ccardmoto" class="%wirecard.payment.service.ccardmoto.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        
+    	<!-- Banking -->
+        <service id="wirecard.payment.service.bancontactmistercash" class="%wirecard.payment.service.bancontactmistercash.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.ekonto" class="%wirecard.payment.service.ekonto.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.eps" class="%wirecard.payment.service.eps.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.giropay" class="%wirecard.payment.service.giropay.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.idl" class="%wirecard.payment.service.idl.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.poli" class="%wirecard.payment.service.poli.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.przelewy24" class="%wirecard.payment.service.przelewy24.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.skrilldirect" class="%wirecard.payment.service.skrilldirect.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.sofortueberweisung" class="%wirecard.payment.service.sofortueberweisung.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.tatrapay" class="%wirecard.payment.service.tatrapay.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.trustly" class="%wirecard.payment.service.trustly.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        
+    	<!-- DirectDebit -->
+        <service id="wirecard.payment.service.sepadd" class="%wirecard.payment.service.sepadd.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        
+    	<!-- Mobile -->
+        <service id="wirecard.payment.service.mpass" class="%wirecard.payment.service.mpass.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+        <service id="wirecard.payment.service.pbx" class="%wirecard.payment.service.pbx.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+    	
+    	<!-- Voucher -->
+        <service id="wirecard.payment.service.voucher" class="%wirecard.payment.service.voucher.class%">
+            <tag name="sapet.extension.payment" />
+        </service>
+    </services>
+</container>
+
