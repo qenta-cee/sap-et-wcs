@@ -3,6 +3,14 @@
 [![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/wirecard/sap-et-wcs/master/LICENSE)
 [![Shopware](https://img.shields.io/badge/SAP_Event_Ticketing-v6.1-green.svg)](http://go.sap.com/austria/solution/industry/sports-entertainment/ticketing.html)
 
+----
+**IMPORTANT INFORMATION**  
+You are visiting a shop extension which will become obsolete in the near future and will not be continued.  
+Please take a look at [our online documentation](https://doc.wirecard.com), which describes in more detail how to integrate the Wirecard Payment Gateway into your online shop.  
+If you have any questions, please contact shop-systems-support@wirecard.com  
+
+----
+
 Wirecard Checkout Seamless plugin for SAP Event Ticketing. 
 
 Our [Online Guides](https://guides.wirecard.at/) provide further information on payment methods and additional features. Please observe our [terms of use](https://guides.wirecard.at/shop_plugins:info#terms_of_use) regarding plugins.
